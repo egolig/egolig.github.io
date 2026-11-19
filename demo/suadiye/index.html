@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Suadiye Kürek ve Kano — Web Sitesi Önizlemesi</title>
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:type" content="website"><meta property="og:title" content="Suadiye Kürek ve Kano — Web Sitesi Önizlemesi">
+<meta property="og:description" content="Suadiye sahilinde deniz küreği ve kano. İlk denemeden yarışa, yerli ve yabancı gruplara.">
+<meta property="og:url" content="https://egolig.github.io/demo/suadiye/"><meta property="og:image" content="https://egolig.github.io/demo/suadiye/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<style>:root{--bg:#E6F4F1;--ink:#062C3B;--accent:#F2C14E;--accent2:#0B4F6C;--soft:#CDE8E4;--btn-ink:#062C3B;--scrim:rgba(6,44,59,.94);--display:'Syne';--body:'Manrope'}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body),system-ui,sans-serif;font-size:17px;line-height:1.55}
+h1,h2,h3{font-family:var(--display),system-ui,sans-serif;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.demo-band{position:sticky;top:0;z-index:20;background:#111827;color:#F9FAFB;font:600 13px/1.4 system-ui,sans-serif;text-align:center;padding:.55rem 1rem}
+.wrap{max-width:1080px;margin:0 auto;padding:0 1.25rem}
+.hero{position:relative}
+.hero .sub{font-size:1.15rem;max-width:36rem;margin:1rem 0 1.5rem}
+.cta{display:flex;gap:.7rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;text-decoration:none;padding:.85rem 1.3rem;border-radius:999px;border:2px solid transparent;cursor:pointer;font-size:1rem;font-family:inherit}
+.btn-main{background:var(--accent);color:var(--btn-ink)}
+.btn-ghost{border-color:currentColor;background:transparent;color:inherit}
+.num{display:block;font-size:.85rem;opacity:.8;margin-top:.5rem}
+/* yerleşimler */
+.layout-poster .hero{min-height:88vh;display:flex;align-items:flex-end;overflow:hidden}
+.layout-poster .hero .art{position:absolute;inset:0}
+.layout-poster .hero .art svg{width:100%;height:100%}
+.layout-poster .hero .copy{position:relative;padding:3rem 0 3.5rem}
+.layout-poster .hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:70%;background:linear-gradient(to bottom,transparent,var(--scrim,transparent) 55%)}
+.layout-poster .hero .wrap{position:relative;z-index:1;width:100%}
+.layout-split .hero{padding:3.5rem 0 3rem}
+.layout-split .hero .wrap{display:grid;gap:2rem;align-items:center}
+.layout-split .hero .art svg{width:100%;max-width:440px;height:auto;display:block;margin:0 auto}
+@media(min-width:820px){.layout-split .hero .wrap{grid-template-columns:1.15fr .85fr}}
+.layout-band .hero{padding:3.5rem 0 2.5rem}
+section{padding:3.2rem 0}
+section h2{font-size:clamp(1.6rem,3.6vw,2.3rem);line-height:1.15;margin-bottom:1.4rem}
+.services ul{list-style:none;margin:0;padding:0;display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.services h3{font-size:1.25rem;margin-bottom:.3rem}
+.services p{margin:0}
+.proof{background:var(--soft)}
+.proof .score{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.proof .score b{font-family:var(--display);font-size:clamp(2.6rem,8vw,4rem);line-height:1}
+.proof .stars{color:var(--accent);font-size:1.6rem;letter-spacing:.1em}
+.proof p{max-width:38rem}
+.addon{border:2px dashed var(--accent2);border-radius:16px;padding:1.6rem;position:relative;background:color-mix(in srgb,var(--bg) 85%,#fff)}
+.addon .tag{position:absolute;top:-.85rem;left:1.2rem;background:var(--accent2);color:#fff;font:600 13px/1 system-ui,sans-serif;padding:.4rem .7rem;border-radius:6px}
+.addon h3{font-size:1.4rem;margin:.4rem 0 1rem}
+.chips{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.chip{font:inherit;border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:10px;padding:.45rem .75rem;cursor:pointer;min-width:3.6rem}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.chip small{display:block;font-size:.75rem;opacity:.75}
+.stepper{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem}
+.stepper button{width:2.4rem;height:2.4rem;border-radius:50%;border:2px solid var(--ink);background:transparent;color:var(--ink);font-size:1.2rem;cursor:pointer}
+.note{margin-top:1rem;padding:.8rem 1rem;border-radius:10px;background:var(--soft);display:none}
+.note.show{display:block}
+.visit .grid{display:grid;gap:2rem}
+@media(min-width:820px){.visit .grid{grid-template-columns:1fr 1fr}}
+table{border-collapse:collapse;width:100%;max-width:26rem}
+td{padding:.4rem 0;border-bottom:1px solid color-mix(in srgb,var(--ink) 15%,transparent)}
+td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+tr.today td{font-weight:600}
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:1.4rem}
+.photos div{aspect-ratio:1;border-radius:10px;display:grid;place-items:center;text-align:center;font-size:.85rem;padding:.5rem;background:repeating-linear-gradient(45deg,var(--soft) 0 10px,color-mix(in srgb,var(--soft) 60%,#fff) 10px 20px);border:1px solid color-mix(in srgb,var(--ink) 15%,transparent)}
+.contact{background:var(--ink);color:var(--bg)}
+.contact .btn-main{color:var(--btn-ink)}
+footer{padding:1.6rem 0;font-size:.85rem;background:var(--ink);color:color-mix(in srgb,var(--bg) 70%,transparent);border-top:1px solid color-mix(in srgb,var(--bg) 20%,transparent)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+.hero{color:#E6F4F1}
+.hero h1{font-weight:800;font-size:clamp(2.4rem,7vw,4.6rem);line-height:1;max-width:12ch}
+.hero .sub{color:#CDE8E4}
+.lang-switch{display:inline-flex;gap:.3rem;margin-bottom:1rem;background:rgba(6,44,59,.5);padding:.3rem;border-radius:999px}
+.lang-switch button{font:inherit;font-weight:600;border:0;background:transparent;color:#E6F4F1;padding:.3rem .8rem;border-radius:999px;cursor:pointer}
+.lang-switch button[aria-pressed=true]{background:var(--accent);color:var(--ink)}
+.services li{background:#fff;border-radius:18px 18px 18px 4px;padding:1.1rem 1.3rem}
+.services h3{font-family:var(--display)}
+</style></head>
+<body class="layout-poster">
+<div class="demo-band">Önizleme · Bu tasarım Suadiye Kürek ve Kano Spor Kulübü için Ege tarafından teklif amaçlı hazırlanmıştır.</div>
+<header class="hero"><div class="art"><svg viewBox="0 0 800 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<rect width="800" height="480" fill="#0B4F6C"/>
+<circle cx="640" cy="110" r="54" fill="#F2C14E"/>
+<g stroke="#5FA8BF" stroke-width="2" fill="none" opacity=".6"><path d="M0 300 q40 -10 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0"/><path d="M0 360 q40 -10 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0"/></g>
+<path d="M500 300 C520 230 600 220 640 270 L628 276 C600 246 548 252 530 300Z" fill="#6C7A89"/>
+<path d="M600 236 l14 -16 l4 22Z" fill="#6C7A89"/>
+<g fill="#E6F4F1"><path d="M120 316 L440 316 Q420 334 140 334Z"/>
+<circle cx="190" cy="296" r="8"/><circle cx="260" cy="296" r="8"/><circle cx="330" cy="296" r="8"/><circle cx="400" cy="296" r="8"/></g>
+<g stroke="#E6F4F1" stroke-width="3"><line x1="170" y1="290" x2="210" y2="350"/><line x1="240" y1="290" x2="280" y2="350"/><line x1="310" y1="290" x2="350" y2="350"/><line x1="380" y1="290" x2="420" y2="350"/></g>
+</svg></div><div class="wrap"><div class="copy"><div class="lang-switch" role="group" aria-label="Dil"><button type="button" data-lang="tr" aria-pressed="true">TR</button><button type="button" data-lang="en" aria-pressed="false">EN</button><button type="button" data-lang="de" aria-pressed="false">DE</button></div><h1 id="h1">Yunuslar bazen eşlik ediyor.</h1><p class="sub" id="hsub">Suadiye sahilinde deniz küreği ve kano. İlk denemeden yarışa, yerli ve yabancı gruplara.</p>
+<div class="cta"><a class="btn btn-main" href="+905513916701">Hemen ara</a><a class="btn btn-ghost" href="https://wa.me/905513916701">WhatsApp'tan yaz</a></div>
+<span class="num">+90 551 391 67 01</span></div></div></header><main><section class="services"><div class="wrap"><h2>Neler yapıyoruz</h2><ul><li><h3>Deniz küreği</h3><p>Kıyı tipi teknelerle açık denizde kürek.</p></li><li><h3>Kano</h3><p>Her yaştan sporcuya kano eğitimi.</p></li><li><h3>Grup tadım seansları</h3><p>Yerli ve yabancı gruplar için iki saatlik tanışma.</p></li><li><h3>Yarışa hazırlık</h3><p>Deneyimli ve milli sporculardan oluşan antrenör kadrosu.</p></li></ul></div></section><section class="proof"><div class="wrap"><h2>Misafirlerimiz ne diyor</h2>
+<div class="score"><b>4,6</b><span class="stars" aria-hidden="true">★★★★★</span><span>Google'da 333 yorum</span></div>
+<p>[Seçtiğiniz misafir yorumları buraya. Google yorumlarınızdan izin vererek eklenir.]</p>
+<a class="btn btn-ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJQ3qH5qbHyhQRPxjyPeg_F2Q">Google'daki yorumları oku</a></div></section><section><div class="wrap"><div class="addon"><span class="tag">Add-on önizlemesi</span><h3>Sayfanız üç dilde</h3>
+<p>Yukarıdaki TR / EN / DE düğmeleriyle başlığın nasıl değiştiğini deneyin. Bu paketle sayfanın tamamı İngilizce ve Almanca da yayına girer; yabancı gruplar sizi kendi dillerinde bulur.</p></div></div></section><section class="visit"><div class="wrap"><h2>Bizi bulun</h2><div class="grid">
+<div><h3>Çalışma saatleri</h3><table><tr data-d='0'><td>Pzt</td><td>Kapalı</td></tr><tr data-d='1'><td>Sal</td><td>06:00–20:30</td></tr><tr data-d='2'><td>Çar</td><td>06:00–20:30</td></tr><tr data-d='3'><td>Per</td><td>06:00–20:30</td></tr><tr data-d='4'><td>Cum</td><td>06:00–20:30</td></tr><tr data-d='5'><td>Cmt</td><td>06:00–20:30</td></tr><tr data-d='6'><td>Paz</td><td>06:00–20:30</td></tr></table><script>(function(){var i=(new Date().getDay()+6)%7;var r=document.querySelector("tr[data-d='"+i+"']");if(r)r.className='today'})();</script></div>
+<div><h3>Adres</h3><p>Suadiye sahili, Kadıköy / İstanbul</p><a class="btn btn-ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJQ3qH5qbHyhQRPxjyPeg_F2Q">Haritada aç</a></div></div>
+<div class="photos"><div>Fotoğraflarınız buraya</div><div>Fotoğraflarınız buraya</div><div>Fotoğraflarınız buraya</div></div></div></section><section class="contact"><div class="wrap"><h2>Suya çıkmak için bir mesaj yeter</h2>
+<div class="cta"><a class="btn btn-main" href="https://wa.me/905513916701">WhatsApp'tan yaz</a><a class="btn btn-ghost" href="+905513916701">Ara: +90 551 391 67 01</a></div></div></section></main><footer><div class="wrap">© 2026 Suadiye Kürek ve Kano Spor Kulübü</div></footer>
+<script>var LANGS={"tr": ["Yunuslar bazen eşlik ediyor.", "Suadiye sahilinde deniz küreği ve kano. İlk denemeden yarışa, yerli ve yabancı gruplara."], "en": ["Sometimes the dolphins join in.", "Coastal rowing and canoeing on the Suadiye shore. From your first stroke to racing, for local and visiting groups."], "de": ["Manchmal rudern Delfine mit.", "Küstenrudern und Kanu an der Küste von Suadiye. Vom ersten Schlag bis zum Rennen, für lokale und internationale Gruppen."]};
+(function(){
+ var T=LANGS,h=document.getElementById('h1'),s=document.getElementById('hsub');
+ document.querySelectorAll('[data-lang]').forEach(function(b){b.onclick=function(){var l=b.getAttribute('data-lang');h.textContent=T[l][0];s.textContent=T[l][1];document.documentElement.lang=l;document.querySelectorAll('[data-lang]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});};});
+})();
+</script></body></html>
